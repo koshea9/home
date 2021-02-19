@@ -11,10 +11,14 @@ class Apartment
     @monthly_rent = value[:monthly_rent]
     @bathrooms = value[:bathrooms]
     @bedrooms = value[:bedrooms]
-    @renter = value[:name]
+    @renter = nil
   end
 
   def add_renter(renter)
     @renter = renter
+  end
+
+  def rented?
+    @renter !=nil
   end
 end
