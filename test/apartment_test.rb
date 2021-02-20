@@ -4,6 +4,8 @@ require './lib/apartment'
 require './lib/renter'
 
 class ApartmentTest < Minitest::Test
+  # These tests look great! We can go over test setup methods to make the copy/pasting a little less if you'd like
+
   def test_it_exists
     renter1 = Renter.new("Jessie")
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
@@ -23,6 +25,7 @@ class ApartmentTest < Minitest::Test
   end
 
   def test_it_can_add_renter
+    # If you have time, going back through a deleting code comments like this will help your code look better
     # skip
     renter1 = Renter.new("Jessie")
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})

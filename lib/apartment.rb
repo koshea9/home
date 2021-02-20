@@ -4,6 +4,8 @@ class Apartment
               :bathrooms,
               :bedrooms
 
+  # The renter class variable can only be edited through the add_renter method, so this can be a reader function
+  # Always try to avoid using attr_accessor unless absolutely necessary (which is almost never) for security purposes
   attr_accessor :renter
 
   def initialize(value)
@@ -18,6 +20,7 @@ class Apartment
     @renter = renter
   end
 
+  # Even simple extra methods like this that aren't in the interaction pattern should have tests
   def rented?
     @renter !=nil
   end
